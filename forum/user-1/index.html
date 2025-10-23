@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Профиль — Interior Horizons</title>
+  <link rel="stylesheet" href="/css/forum.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Всероссийский Форум дизайнеров интерьера</h1>
+    <h2>«INTERIOR HORIZONS»</h2>
+    <p><strong>Слоган:</strong> «Вдохновляй. Создавай. Преображай.»</p>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Программа</a>
+      <a href="#">Участники</a>
+      <a href="#">Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Профиль -->
+    <section class="profile">
+      <div class="profile-avatar">JD</div>
+      <div class="profile-name">Джейн Дизайн</div>
+      <div class="profile-role">Мастер-дизайнер</div>
+      <div class="profile-bio">
+        Опыт более 10 лет. Специализация — урбанистические интерьеры и эко-стиль.
+      </div>
+      <div class="badges">
+        <span class="badge">Эксперт по освещению</span>
+        <span class="badge">AR-визуализация</span>
+        <span class="badge">Победитель батла 2024</span>
+        <span class="badge">Smart-технологии</span>
+      </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section>
+      <h2 class="section-title">Портфолио</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="/x/400x200?HOME" alt="Проект 1" />
+          <div class="gallery-caption">Квартира на берегу моря, Санкт-Петербург</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/x/400x200?LOFT" alt="Проект 2" />
+          <div class="gallery-caption">Лофт в центре Москвы</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/x/400x200?ECO" alt="Проект 3" />
+          <div class="gallery-caption">Эко-дом с нулевым выбросом CO₂</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Загрузка проекта -->
+    <section>
+      <h2 class="section-title">Загрузите новый проект</h2>
+
+      <div class="upload-zone" id="uploadZone">
+        <p>Перетащите изображения сюда или кликните, чтобы выбрать файлы</p>
+        <input type="file" id="fileInput" multiple accept="image/*" />
+      </div>
+
+      <div class="upload-preview" id="preview"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 INTERIOR HORIZONS. Все права защищены.<br/>
+    Мы любим интерьеры так же сильно, как вы любите хороший код.
+  </footer>
+
+  <script>
+    const uploadZone = document.getElementById('uploadZone');
+    const fileInput = document.getElementById('fileInput');
+    const preview = document.getElementById('preview');
+
+    // Клик по зоне = открытие диалога выбора файлов
+    uploadZone.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    // Перетаскивание
+    uploadZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadZone.style.borderColor = 'var(--color-accent)';
+      uploadZone.style.background = '#1f1f1f';
+    });
+
+    uploadZone.addEventListener('dragleave', () => {
+      uploadZone.style.borderColor = '#444';
+      uploadZone.style.background = 'transparent';
+    });
+
+    uploadZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadZone.style.borderColor = '#444';
+      uploadZone.style.background = '
