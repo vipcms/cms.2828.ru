@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INTERIOR HORIZONS</title>
+  <style>
+    /* === Hardcore Reset === */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* === Fonts & Typography === */
+    :root {
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --color-bg: #121212;
+      --color-bg-alt: #1c1c1c;
+      --color-accent: #ff4d4d;
+      --color-text: #f5f5f5;
+      --radius: 8px;
+      --gap: 1rem;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-main);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* === Layout === */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: var(--gap);
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      color: var(--color-accent);
+      margin-top: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+      margin-top: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    nav a {
+      padding: 0.5rem 1rem;
+      background: #333;
+      border-radius: var(--radius);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    main {
+      margin-top: 3rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      width: 50px;
+      height: 2px;
+      background: var(--color-accent);
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--color-bg-alt);
+      border: 1px solid #333;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      background: var(--color-bg-alt);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Всероссийский Форум дизайнеров интерьера</h1>
+    <h2>«INTERIOR HORIZONS»</h2>
+    <p><strong>Слоган:</strong> «Вдохновляй. Создавай. Преображай.»</p>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Программа</a>
+      <a href="#">Участники</a>
+      <a href="#">Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Зонирование пространства -->
+    <section>
+      <h2 class="section-title">Зонирование пространства</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Лаборатория трендов</h3>
+          <p>Интерактивная зона с VR-примеркой интерьеров в реальном времени.</p>
+        </div>
+        <div class="card">
+          <h3>Дизайн-баттл</h3>
+          <p>Реальное создание интерьера за ограниченное время под давлением.</p>
+        </div>
+        <div class="card">
+          <h3>Мастерская идей</h3>
+          <p>Стенды с материалами и технологиями будущего — от умных обоев до био-текстилей.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Программа -->
+    <section>
+      <h2 class="section-title">Программа</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Кейс-сессии</h3>
+          <p>Разбор реальных проектов от топовых дизайнеров и архитекторов.</p>
+        </div>
+        <div class="card">
+          <h3>Дискуссии о будущем</h3>
+          <p>Обсуждение устойчивого дизайна, smart-технологий и новых материалов.</p>
+        </div>
+        <div class="card">
+          <h3>Нетворкинг</h3>
+          <p>Speed-dating формата: дизайнеры и производители мебели знакомятся за 5 минут.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Интерактив -->
+    <section>
+      <h2 class="section-title">Интерактив</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Голосование за лучший концепт</h3>
+          <p>Участники создают эскизы, гости голосуют онлайн или через терминалы.</p>
+        </div>
+        <div class="card">
+          <h3>AR-примерка</h3>
+          <p>Приложение позволяет "примерить" отделку стен, мебель и аксессуары в реальной комнате.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 INTERIOR HORIZONS. Все права защищены.<br/>
+    Мы любим интерьеры так же сильно, как вы любите хороший код.
+  </footer>
+
+</body>
+</html>
