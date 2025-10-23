@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Техническое задание: Форум дизайнеров интерьера</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #ecf0f1;
+      padding: 0.5rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      vertical-align: top;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ecf0f1;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Техническое задание</h1>
+  <p><strong>Форум дизайнеров интерьера "InteriorCraft"</strong></p>
+</header>
+
+<nav>
+  <a href="#intro">Введение</a>
+  <a href="#modules">Модули</a>
+  <a href="#ux">UX/UI</a>
+  <a href="#tech">Технологии</a>
+  <a href="#phases">Этапы</a>
+  <a href="#monetization">Монетизация</a>
+</nav>
+
+<main>
+
+  <section id="intro">
+    <h2>1. Введение</h2>
+    <p>Цель проекта — создать тематический форум для дизайнеров, архитекторов и любителей интерьеров, где пользователи могут делиться своими проектами, получать обратную связь, развивать свой статус через уровни и бейджики, формируя сообщество профессионалов.</p>
+  </section>
+
+  <section id="modules">
+    <h2>2. Основные модули</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Модуль</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Регистрация / Авторизация</td>
+          <td>Email + пароль, вход через соцсети, восстановление пароля</td>
+        </tr>
+        <tr>
+          <td>Профиль пользователя</td>
+          <td>Аватар, никнейм, стиль, портфолио, уровень, бейджики</td>
+        </tr>
+        <tr>
+          <td>Форум</td>
+          <td>Разделы: стили, проекты, советы, материалы, карьера</td>
+        </tr>
+        <tr>
+          <td>Система ролей</td>
+          <td>Уровни: Студент → Энтузиаст → Практикующий → Мастер → Легенда</td>
+        </tr>
+        <tr>
+          <td>Бейджики</td>
+          <td>За активность, полезные советы, лучшие проекты</td>
+        </tr>
+        <tr>
+          <td>Таблицы лидеров</td>
+          <td>По активности, проектам, популярности</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="ux">
+    <h2>3. Требования к UX/UI</h2>
+    <ul>
+      <li>Минималистичный, светлый дизайн</li>
+      <li>Акценты в стиле дизайна интерьера (текстуры дерева, камня)</li>
+      <li>Адаптивность под мобильные устройства</li>
+      <li>Чёткая навигация</li>
+      <li>Визуализация прогресса пользователя</li>
+    </ul>
+  </section>
+
+  <section id="tech">
+    <h2>4. Технические требования</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Пункт</th>
+          <th>Требование</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Backend</td>
+          <td>PHP (Laravel), Node.js или Python (Django)</td>
+        </tr>
+        <tr>
+          <td>Frontend</td>
+          <td>React, Vue.js или чистый HTML/CSS + JS</td>
+        </tr>
+        <tr>
+          <td>База данных</td>
+          <td>MySQL или PostgreSQL</td>
+        </tr>
+        <tr>
+          <td>Хостинг</td>
+          <td>VPS/VDS или облачный хостинг (AWS, DigitalOcean)</td>
+        </tr>
+        <tr>
+          <td>SEO</td>
+          <td>Полная оптимизация под поисковые системы</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="phases">
+    <h2>5. Этапы разработки</h2>
+    <ol>
+      <li><strong>Планирование:</strong> 2 недели</li>
+      <li><strong>Дизайн:</strong> 3 недели</li>
+      <li><strong>Разработка MVP:</strong> 8 недель</li>
+      <li><strong>Тестирование:</strong> 2 недели</li>
+      <li><strong>Запуск и доработка:</strong> 4 недели</li>
+      <li><strong>Расширение функционала:</strong> после запуска</li>
+    </ol>
+  </section>
+
+  <section id="monetization">
+    <h2>6. Монетизация</h2>
+    <ul>
+      <li>Премиум-профили для дизайнеров</li>
+      <li>Реклама от мебельных брендов</li>
+      <li>Партнёрские программы</li>
+      <li>Подписка на закрытые материалы</li>
+      <li>Конкурсы с платой за участие</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 InteriorCraft. Все права защищены.<br/>
+не просто форум — это полноценное событие уровня мировых конференций
+</footer>
